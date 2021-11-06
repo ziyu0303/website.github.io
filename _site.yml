@@ -1,0 +1,19 @@
+name: "Ziyu's Main space"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "About Me"
+      href: My_life.html
+    - text: "Professional Experience"
+      href: https://ziyu0303.github.io
+    - text: "Email Me"
+      icon: fa-envelope fa-lg
+      href: mailto:zc2555@cumc.columbia.edu
+    - text: "My github Page"
+      icon: fa-github fa-lg
+      href: http://github.com/ziyu0303/
+
+output:
+  html_document:
+    theme: sandstone
