@@ -9,8 +9,21 @@ output:
 
 <img src="image1.jpg" style="width:70%">
 
-Hi, welcome to my page! I am a first year MPH student at Columbia Mailman School of Public Health. I studied Epidemiology with a certificate of Applied Biostatistics and Data Science. I have more than 4 years experiences in visual arts and digital designing. I’ve also have experiences with healthcare marketing and health economics. 
+# Introduction
 
+Hi, welcome to my page! My name is Ziyu (she/her/hers). I am a first year MPH student at Columbia Mailman School of Public Health. I studied Epidemiology with a certificate of Applied Biostatistics and Data Science. I have more than 4 years experiences in visual arts and digital designing. I’ve also have experiences with healthcare marketing and health economics. 
+
+
+# My dashboard
 Here's the link to my 
 [dashboard](Dashboard.html)
+
+
+# My cats
+
+[Piper and Jeffery](My_life.html)
+
+# My professional experience
+
+[Resume](https://ziyu0303.github.io)
 
