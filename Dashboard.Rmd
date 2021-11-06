@@ -1,0 +1,81 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+```
+
+Column {data-width=450}
+-----------------------------------------------------------------------
+
+### Plot A: The Bronx Airbnb
+
+```{r}
+data(nyc_airbnb)
+
+bronx_airbnb = 
+  nyc_airbnb %>% 
+  mutate(rating = review_scores_location ) %>%
+  select(
+    neighbourhood_group, neighbourhood, rating, price, room_type, lat, long) %>%
+  filter(
+    !is.na(rating), 
+    neighbourhood_group == "Bronx",
+    price %in% 100:200)
+  
+
+bronx_airbnb %>%
+  mutate(text_label = str_c("Price: $", price)) %>% 
+  plot_ly(
+    x = ~lat, y = ~long, type = "scatter", mode = "markers",
+    color = ~price, text = ~text_label, alpha = 0.5)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+data(nyc_airbnb)
+
+queens_airbnb = 
+  nyc_airbnb %>% 
+  mutate(rating = review_scores_location ) %>%
+  select(
+    neighbourhood_group, neighbourhood, rating, price, room_type, lat, long) %>%
+  filter(
+    !is.na(rating), 
+    neighbourhood_group == "Queens",
+    price %in% 100:200)
+  
+
+queens_airbnb %>%
+  mutate(text_label = str_c("Price: $", price)) %>% 
+  plot_ly(
+    x = ~lat, y = ~long, type = "scatter", mode = "markers",
+    color = ~price, text = ~text_label, alpha = 0.5)
+```
+
+### Chart C
+
+```{r}
+boxplot1 = 
+  queens_airbnb %>% 
+  mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>% 
+  ggplot(aes(x = neighbourhood, y = price, fill = neighbourhood)) +
+  geom_boxplot() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5))
+
+ggplotly(boxplot1)
+```

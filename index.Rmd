@@ -7,9 +7,10 @@ output:
   
 ---
 
+<img src="image1.jpg" style="width:70%">
 
-![](image1.jpg)
+Hi, welcome to my page! I am a first year MPH student at Columbia Mailman School of Public Health. I studied Epidemiology with a certificate of Applied Biostatistics and Data Science. I have more than 4 years experiences in visual arts and digital designing. I’ve also have experiences with healthcare marketing and health economics. 
 
-
-Hello everyone! My name is Ziyu. I am currently a second year MPH student in Epidemiology department. 
+Here's the link to my 
+[dashboard](Dashboard.html)
 
