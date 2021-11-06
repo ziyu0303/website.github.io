@@ -1,29 +1,50 @@
 ---
-title: "Ziyu's personal space"
+title: "Ziyu's Personal Website"
 output: 
   html_document:
     toc: true
     toc_float: true
+    toc_depth: 5
   
 ---
 
-<img src="image1.jpg" style="width:70%">
+
+<img src="image.png" style="width:50%">
+
+----------------------------------------
 
 # Introduction
 
-Hi, welcome to my page! My name is Ziyu (she/her/hers). I am a first year MPH student at Columbia Mailman School of Public Health. I studied Epidemiology with a certificate of Applied Biostatistics and Data Science. I have more than 4 years experiences in visual arts and digital designing. I’ve also have experiences with healthcare marketing and health economics. 
+Hi, welcome to my page! My name is Ziyu (she/her/hers). I am a first year MPH student at Columbia Mailman School of Public Health. I studied Epidemiology with a certificate of Applied Biostatistics and Data Science. I have more than 4 years experiences in visual arts and digital designing. I’ve also have experiences with healthcare marketing and health economics.   
+
+<img src="image1.jpg" style="width:70%">
+---------------------------------------
+
+---------------------------------------
 
 
-# My dashboard
+
+# My nyc airbnb dataset dashboard
+I did 3 interative plots showing the nyc airbnb price and location in Queens and Bronx.
+
+<img src="image 6.png" style="width:50%">
+
 Here's the link to my 
-[dashboard](Dashboard.html)
+[dashboard](Dashboard.html)  
 
+
+-----------------------------------
 
 # My cats
 
-[Piper and Jeffery](My_life.html)
+[Piper and Jeffery](My_life.html)     
+
+-----------------------------------
 
 # My professional experience
 
-[Resume](https://ziyu0303.github.io)
+This is my 
+[personal website](https://ziyu0303.github.io).
+
+-----------------------------------
 

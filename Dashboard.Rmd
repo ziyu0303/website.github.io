@@ -44,7 +44,7 @@ bronx_airbnb %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Chart B. The Queens Airbnb
 
 ```{r}
 data(nyc_airbnb)
@@ -67,7 +67,7 @@ queens_airbnb %>%
     color = ~price, text = ~text_label, alpha = 0.5)
 ```
 
-### Chart C
+### Chart C. The queens airbnb boxplot
 
 ```{r}
 boxplot1 = 
