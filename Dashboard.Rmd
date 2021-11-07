@@ -35,7 +35,8 @@ bronx_airbnb =
   
 
 bronx_airbnb %>%
-  mutate(text_label = str_c("Price: $", price)) %>% 
+  mutate(text_label = str_c("Price: $", price, 
+                            "Location", neighbourhood)) %>% 
   plot_ly(
     x = ~lat, y = ~long, type = "scatter", mode = "markers",
     color = ~price, text = ~text_label, alpha = 0.5)
@@ -47,34 +48,20 @@ bronx_airbnb %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B. The Queens Airbnb
+### Chart B. The Bronx Airbnb Number 
 
 ```{r}
-data(nyc_airbnb)
-
-queens_airbnb = 
-  nyc_airbnb %>% 
-  mutate(rating = review_scores_location ) %>%
-  select(
-    neighbourhood_group, neighbourhood, rating, price, room_type, lat, long) %>%
-  filter(
-    !is.na(rating), 
-    neighbourhood_group == "Queens",
-    price %in% 100:200)
-  
-
-queens_airbnb %>%
-  mutate(text_label = str_c("Price: $", price)) %>% 
-  plot_ly(
-    x = ~lat, y = ~long, type = "scatter", mode = "markers",
-    color = ~price, text = ~text_label, alpha = 0.5)
+bronx_airbnb %>%
+  count(neighbourhood) %>% 
+  mutate(neighbourhood = fct_reorder(neighbourhood, n)) %>% 
+  plot_ly(x = ~neighbourhood, y = ~n, type = "bar", colors = "viridis")
 ```
 
-### Chart C. The queens airbnb boxplot
+### Chart C. The bronx airbnb boxplot
 
 ```{r}
 boxplot1 = 
-  queens_airbnb %>% 
+  bronx_airbnb %>% 
   mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>% 
   ggplot(aes(x = neighbourhood, y = price, fill = neighbourhood)) +
   geom_boxplot() +
