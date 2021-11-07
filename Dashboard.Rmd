@@ -15,7 +15,7 @@ library(plotly)
 
 ```
 
-Column {data-width=450}
+Column {data-width=350}
 -----------------------------------------------------------------------
 
 ### Plot A: The Bronx Airbnb
@@ -40,23 +40,6 @@ bronx_airbnb %>%
     x = ~lat, y = ~long, type = "scatter", mode = "markers",
     color = ~price, text = ~text_label, alpha = 0.5)
 ```
-
-Column {data-width=350}
------------------------------------------------------------------------
-
-### Chart B. The Queens Airbnb
-```{r}
-boxplot1 = 
-  bronx_airbnb %>% 
-  mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>% 
-  ggplot(aes(x = neighbourhood, y = price, fill = neighbourhood)) +
-  geom_boxplot() +
-  theme(axis.text.x = element_text(angle = 90, hjust = 0.5))
-
-ggplotly(boxplot1)
-```
-
-
 
 
 

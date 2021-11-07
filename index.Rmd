@@ -1,5 +1,5 @@
 ---
-title: "Ziyu's Personal Website"
+title: "Ziyu's Website"
 output: 
   html_document:
     toc: true
@@ -22,25 +22,24 @@ Hi, welcome to my page! My name is Ziyu (she/her/hers). I am a first year MPH st
 
 ---------------------------------------
 
-
-
-# My nyc airbnb dataset dashboard
-I did 3 interative plots showing the nyc airbnb price and location in Queens and Bronx.
-
-<img src="image 6.png" style="width:50%">
-
-Here's the link to my 
-[dashboard](Dashboard.html)  
-
-
------------------------------------
-
 # My professional experience
 
 This is my 
 [personal website](https://ziyu0303.github.io). You can find my work experiences and projects there.
 
-<img src="image.png" style="width:50%">
+<img src="image.png" style="width:20%">
+
+
+
+-----------------------------------
+
+# My nyc airbnb dataset dashboard
+I did 3 interative plots showing the nyc airbnb price and location in Queens and Bronx.
+
+<img src="image 6.png" style="width:15%">
+
+Here's the link to my 
+[dashboard](Dashboard.html)  
 
 -----------------------------------
 
