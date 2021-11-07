@@ -45,6 +45,26 @@ Column {data-width=350}
 -----------------------------------------------------------------------
 
 ### Chart B. The Queens Airbnb
+```{r}
+boxplot1 = 
+  bronx_airbnb %>% 
+  mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>% 
+  ggplot(aes(x = neighbourhood, y = price, fill = neighbourhood)) +
+  geom_boxplot() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5))
+
+ggplotly(boxplot1)
+```
+
+
+
+
+
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B. The Queens Airbnb
 
 ```{r}
 data(nyc_airbnb)
